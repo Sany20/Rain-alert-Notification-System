@@ -7,11 +7,11 @@ city = input("Enter location in city,country format: ")
 
 location = geolocator.geocode(city)
 
-api_key = "e33c20d284c41150622d7569a36706e6"
+api_key = "YOUR API KEY"
 LAT = location.latitude
 LONG = location.longitude
-account_sid = "ACeceb5af6c0fb0be6f69f951d269f3811"
-auth_token = "04b28892dea27567203e2407289c5b6b"
+account_sid = "YOUR ACCOUNT SID"
+auth_token = "YOUR AUTH TOKEN"
 parameters = {
     "lat": LAT,
     "lon": LONG,
@@ -34,7 +34,7 @@ if will_rain:
     message = client.messages \
         .create(
         body="It is going to rain today make sure to bring an ☂️ ",
-        from_='+12705144877',
-        to='+918275676705'
+        from_='SENDER'S NUMBER',
+        to='YOUR NUMBER'
     )
     print(message.status)
